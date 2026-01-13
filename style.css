@@ -113,7 +113,7 @@ footer {
 }
 
 .project-grid {
-    display: flex; /*Poner cajas en filas*/
+    display: flex; /*Poner cajas en una fila continuas*/
     gap: 20px;/*Poner espacio entre los cuadros */
     justify-content: center; /* Centrar las cajas*/
 }
@@ -147,11 +147,35 @@ footer {
 .project-card button {
     display: block; /*el botón ocupa su propia línea*/
     margin: 15px auto 0; /*centra horizontalmente*/
-    margin-top: 15px;
+    margin-top: 15px; /*deja espacio con el texto (que esta arriba)*/
 }
 
 .project-card img {
     display: block;
     margin: 0 auto 10px;
     margin-bottom: 5px; 
+}
+
+.nombreYemail{ 
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.nombreYemail input {
+    flex: 1; /* ambos ocupan el mismo ancho */
+}
+
+/*Contacto*/
+.contenido-contacto {
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto form {
+    flex: 15; /*Espacio que ocupa el form en el flex*/
+}
+
+.contact-image {
+    flex: 1; /*Espacio que ocupa los iconos*/
 }
