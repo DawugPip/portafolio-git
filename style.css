@@ -11,16 +11,30 @@ body {
 }
 
 header {
-    background: #333;
+    background: #1E3853;
     color: white;
     padding: 1rem;
 }
 
+
+
+
 nav {
+    color: #1E3557;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+#NavNombre {
+    color: white;
+}
+
+#inicio {
+    background-color: #6048A6;
+    color: white;
+}
+
 
 nav ul {
     display: flex;
@@ -35,12 +49,15 @@ nav a {
 
 section {
     padding: 2rem;
-    min-height: 300px;
+    min-height: 200px;
 }
 
 .hero {
     background: #f4f4f4;
     text-align: center;
+    
+
+    
 }
 
 .project-grid {
@@ -73,11 +90,68 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    
 }
 
 footer {
-    background: #333;
+    background: #1E3658;
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+.contact{
+    background: #F2F5FA;
+    text-align: center;
+}
+
+.social{
+    background: #F2F5FA;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex; /*Poner cajas en filas*/
+    gap: 20px;/*Poner espacio entre los cuadros */
+    justify-content: center; /* Centrar las cajas*/
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* X, Y, difuminado, color */
+}
+
+#botonProyectos {
+    background-color: #EF7424;
+}
+
+.verMas {
+    border: 2px solid #b1d0E2;
+    background-color: white;
+    color: #018;
+}
+
+#enviarMensaje {
+    background-color: #2B69E4;
+}
+
+#inicio {
+    height: 100px;
+}
+
+.project-card button {
+    display: block; /*el botón ocupa su propia línea*/
+    margin: 15px auto 0; /*centra horizontalmente*/
+    margin-top: 15px;
+}
+
+.project-card img {
+    display: block;
+    margin: 0 auto 10px;
+    margin-bottom: 5px; 
 }

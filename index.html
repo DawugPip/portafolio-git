@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>FDRO</h1>
+            <h1 id="NavNombre">FDRO</h1>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -22,7 +22,7 @@
         <section id="inicio" class="hero">
             <h2>FDRO - Desarrollador Fullstack</h2>
             <p>Creando experiencias digitales increibles</p>
-            <button id="botonBienvenido">Bienvenido</button>
+            <button id="botonProyectos">Ver proyectos</button>
         </section>
 
         <section id="proyectos" class="projects">
@@ -32,19 +32,19 @@
                     <img src="https://heraldodemexico.com.mx/u/fotografias/m/2020/11/5/f1280x720-278913_410588_5050.jpg" width="150" height="100">
                     <h3>Proyecto 1</h3>
                     <p>Este fue el primer proyecto</p>
-                    <button>Ver mas</button>
+                    <button class="verMas">Ver mas</button>
                 </div>
                 <div class="project-card">
                     <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/01/16/16738813892252.jpg"width="150" height="100">
                     <h3>Proyecto 2</h3>
-                    <p>Este fue el segundo</p>
-                    <button>Ver mas</button>
+                    <p>Este fue el segundo proyecto</p>
+                    <button class="verMas">Ver mas</button>
                 </div>
                 <div class="project-card">
-                    <img src="https://cdn.unotv.com/images/2023/08/razas-gatos-mas-obedientes-131424.jpg" width="150" height="100"></a>>
+                    <img src="https://cdn.unotv.com/images/2023/08/razas-gatos-mas-obedientes-131424.jpg" width="150" height="100"></a>
                     <h3>Proyecto 3</h3>
-                    <p>Este fue el tercero</p>
-                    <button>Ver mas</button>
+                    <p>Este fue el tercer proyecto</p>
+                    <button class="verMas">Ver mas</button>
                 </div>
             </div>
         </section>
@@ -55,7 +55,7 @@
                 <input type="text" placeholder="Nombre" required>
                 <input type="email" placeholder="Email" required>
                 <textarea placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar mensaje</button>
+                <button type="submit" id="enviarMensaje">Enviar mensaje</button>
             </form>
         </section>
 
