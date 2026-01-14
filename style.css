@@ -209,3 +209,18 @@ footer {
     margin-right: 10px; /*Crear espacio a la derecha de los botones*/
     margin-top: 10px; /*Crear espacio entre texto y botones*/
 }
+
+/*Bloque 2*/
+.about-me{
+    text-align: center;
+}
+
+.foto-y-descripcion {
+    margin-top: 20px; /*Espacio entre el titulo y la imagen*/
+    display: flex !important; /* El !important asegura que no haya otra regla ganándole */
+    justify-content: center; /* ESTA LÍNEA centra el grupo completo horizontalmente */
+    align-items: center;  /* Alinea el texto al inicio de la imagen */
+    gap: 30px; /*Espacio entre la imagen y el texto*/
+    width: 100%;/* Asegura que el contenedor use todo el espacio */
+}
+
