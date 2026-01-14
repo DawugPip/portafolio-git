@@ -66,8 +66,9 @@ section {
 
 .hero {
     background: #f4f4f4; /*color de fondo del apartado hero de los proyectos*/
-    text-align: center; /*centrar el texto del apartado hero (mis proyectos)*/
+    text-align:  center; /*centrar el texto del apartado incio*/
 }
+
 
 .project-grid { 
     display: grid; /*poner las tarjetas de proyectos en una misma fila*/
@@ -78,6 +79,10 @@ section {
 .project-card {
     border: 1px solid #ddd; /*borde de las tarjetas de proyectos*/
     padding: 1rem; /*espacio entre los elementos de las tarjetas de proyectos*/
+}
+
+#titulo-proyectos { 
+    margin-left: 330px; /* Alinear texto de "mis proyectos con las tarjetas */ 
 }
 
 form {
@@ -115,7 +120,7 @@ footer {
 }
 
 .social{
-    background: #F2F5FA; /*COlor del fondo de la seccion contacto*/
+    background: #F2F5FA; /*Color del fondo de la seccion contacto*/
     text-align: center; /*alinear elementos (iconos) al centro*/
 }
 
@@ -124,6 +129,7 @@ footer {
     gap: 20px;/*Poner espacio entre los cuadros */
     justify-content: center; /* Centrar las cajas*/
 }
+
 
 .project-card {
     border: 1px solid #ccc; /*Borde de las tarjetas de bloque*/
@@ -158,6 +164,10 @@ footer {
     border-radius: 20px; /*hacer la imagen circular*/
 }
 
+.project-card p {
+    display: block; /*El parrafo ocupa su propia linea*/
+}
+
 .nombreYemail{ 
     margin-top: 10px; /*Crear espacio entre el cuadro de email y el cuadro de mensaje*/
     display: flex; /*Poner los cuadros de nombre y email en una misma fila*/
@@ -172,13 +182,17 @@ footer {
 .contenido-contacto {
     display: flex; /*Poner el form y los iconos en una misma fila*/
     align-items: center; /*Alinear los elementos al centro verticalmente*/
+    justify-content: flex-start; /*Centrar los elementos horizontalmente*/
+    gap: 20px; /*Crear espacio entre el form y los iconos*/
+    max-width: 800px; /*Ancho maximo del contenido de contacto*/
+    margin: 0 auto; /*Centrar el contenido de contacto*/
 }
 
 .contenido-contacto form {
-    flex: 15; /*Espacio que ocupa el form en el flex*/
+    flex: 3; /*Espacio que ocupa el form en el flex*/
 }
 
-.contact-image {
+.contacto-imagen {
     flex: 1; /*Espacio que ocupa los iconos*/
 }
 
