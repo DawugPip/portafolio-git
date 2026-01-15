@@ -138,6 +138,7 @@ footer {
     text-align: left; /*Alinear el texto a la izquierda*/
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* ponerle sombra a la caja: X, Y, difuminado, color */
     border-radius: 4%; /*Hacer las tarjetas de bloque circulares*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
 }
 
 .verMas {
@@ -211,12 +212,28 @@ footer {
 }
 
 /*Bloque 2*/
+
+#texto-sobre-mi{
+    text-align: center; 
+    /* Efecto de brillo usando varias capas de sombra */
+    text-shadow: 
+      0 0 4px white,
+      0 0 0px white,
+      0 0 0px white,
+      0 0 0px white;
+}
+
 .about-me{
-    text-align: center;
+    text-align: left; 
+    background-color: black; /*Color de fondo de la seccion*/
+    color: white; /*Color de los textos de la seccion*/
 }
 
 .foto-y-descripcion {
-    margin-top: 20px; /*Espacio entre el titulo y la imagen*/
+    margin-top: 15px; /*Espacio entre el titulo y la imagen*/
+    margin-bottom: 50px; /*poner espacio entre el texto y la lista*/
+    padding-left: 300px; /*Para poner espacio entre el borde izquierdo y la imagen*/
+    padding-right: 300px; /*Para poner espacio entre el borde derechp y el texto*/
     display: flex !important; /* El !important asegura que no haya otra regla ganándole */
     justify-content: center; /* ESTA LÍNEA centra el grupo completo horizontalmente */
     align-items: center;  /* Alinea el texto al inicio de la imagen */
@@ -224,3 +241,95 @@ footer {
     width: 100%;/* Asegura que el contenedor use todo el espacio */
 }
 
+.foto-y-descripcion img {
+    border: 5px solid white; /*ponerle un marco blanco al perfil*/
+    border-radius: 70px; /*hacerlo un circulo*/
+}
+
+.about-me{
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="3" fill="%23ff6b6b"/></svg>');
+    text-align: left; /*Alinear el texto junto a la imagen a la izquierda*/
+}
+
+/*Tarjetas de habilidades*/
+.skill-grid-1 {
+    margin-top: 20px; 
+    display: flex; /*Poner cajas en una fila continuas*/
+    gap: 20px;/*Poner espacio entre los cuadros */
+    justify-content: center; /* Centrar las cajas*/
+}
+
+.skill-grid-2 {
+    margin-top: 30px;
+    display: flex; /*Poner cajas en una fila continuas*/
+    gap: 20px;/*Poner espacio entre los cuadros */
+    justify-content: center; /* Centrar las cajas*/
+}
+
+.skill-card {
+    border: 1px solid #ccc; /*Borde de las tarjetas de bloque*/
+    padding: 25px; /*Espacio dentro de la tarjeta*/
+    width: 250px; /*Ancho de la tarjeta*/
+    text-align: center; /*Alinear el texto a la izquierda*/
+    box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.3); /* ponerle sombra a la caja: X, Y, difuminado, color */
+    border-radius: 4%; /*Hacer las tarjetas de bloque circulares*/
+}
+
+/*EFECTO HOVER: La tarjeta se eleva y resalta */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* ESTILO DE LOS BADGES */
+.badges {
+    margin: 1rem 0; /*Ajustarlos al centro*/
+}
+
+.badge {
+    padding: 4px 10px; /*Hacer los botones mas anchos*/
+    border-radius: 20px; /*Hacer los botones circulos*/
+    font-size: 0.75rem; /*ajustar tamanio de texto*/
+    font-weight: bold; /*colocarlos en negritas*/
+    margin-right: 5px; /*poner espacio entre botones*/
+    color: white; /*color de los textos*/
+}
+
+/* Colores específicos por tecnología */
+.html { background-color: #e34c26; }
+.css { background-color: #264de4; }
+.js { background-color: #f7df1e; color: #333; }
+
+/* ENLACES DEMO Y CÓDIGO */
+.card-links {
+    display: flex; /*Poner los botones en la misma fila*/
+    gap: 10px; /*Poner espacio entre botones*/
+    margin-top: 15px; /*Poner espacio entre botones y lenguajes*/
+}
+
+.btn-link {
+    flex: 1; /*ajustar horizontalmente los botones*/
+    text-align: center; /*colocar los botones en el centro*/
+    padding: 8px; /*ajustar verticalmente los botones*/
+    text-decoration: none; /*quitar subrayado*/
+    border-radius: 6px; /*hacerlo circulo*/
+    font-size: 0.9rem; /*ajustar tamanio de texto*/
+    transition: background 0.2s;
+}
+
+/*CAMBIAR COLORES Y FONDOS DE LOS BOTONES DEMO Y CODIGO*/
+.demo { /*color normal*/
+    background-color: #333; 
+    color: white;
+}
+
+.demo:hover { background-color: #000; } /*color normal*/
+
+.code {/*color normal*/
+    border: 1px solid #333;
+    color: #333;
+}
+
+.code:hover {
+    background-color: #f4f4f4; /*color encima*/
+}
