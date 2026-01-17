@@ -132,10 +132,10 @@
             <form>
                 <div class="nombreYemail">
                     <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" title="Introduce un correo válido (ej. usuario@dominio.com)" placeholder="Email" required> 
                 </div>
                 
-            <textarea placeholder="Mensaje" required></textarea>
+            <textarea required placeholder="Mensaje" minlength="20" title="Ingresa al menos 20 caracteres"></textarea>
             <button type="submit" id="enviarMensaje">Enviar mensaje</button>
             </form>
             

@@ -437,3 +437,25 @@ input,textarea{
         flex-direction: column; /* Pasa de lado-a-lado a uno-sobre-otro */
     }
 }
+
+/* Uso de valid e invalid*/
+input:invalid { /*Cuando no cumpla las reglas que pusimos en el html*/
+  border: 2px solid red; /*Se pone rojo el color de las esquinas*/
+  background-color: #ffe6e6; /*Un poco rojo el color del campo*/
+}
+
+input:valid { /*Cuando si cumpla las reglas que pusimos en el html*/
+  border: 2px solid green;  /*Se pone verde el color de las esquinas*/
+  background-color: #e6ffe6; /*Un poco verde el color del campo*/
+}
+
+
+textarea:invalid { /*Lo mismo aqui*/
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+textarea:valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
