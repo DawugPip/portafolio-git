@@ -459,3 +459,28 @@ textarea:valid {
   border: 2px solid green;
   background-color: #e6ffe6;
 }
+
+
+/* Labels */
+
+/* Etiquetas */
+.contenido-contacto label {
+    text-align: left; /* Alinea el texto a la izquierda*/
+    font-weight: bold; /*Lo pone en negritas*/
+    margin-bottom: 5px; /*Crea espacios entre las cajas y los labels*/
+    color: #555; /*Color de los labels*/
+    font-size: 0.9rem; /*Ajustar el tamanio de los labels*/
+}
+
+/* Aqui se separa mas los labels con los inputs */
+.contenido-contacto input, 
+.contenido-contacto textarea {
+    margin-bottom: 10px; /*Se crea espacio antes del siguiente label*/
+}
+
+/*Solo para pantallas mayores a 1024px (osea laptops y monitores)*/
+@media (min-width: 1025px) {
+    #label-mensaje {
+        text-align: center;
+    }
+}             

@@ -29,19 +29,19 @@
             <h2 id="texto-sobre-mi">Sobre Mí</h2>
 
             <div class="foto-y-descripcion">
-                <img src="https://i.redd.it/0shblefadm771.jpg" width="200" height="180">
+                <img src="https://i.redd.it/0shblefadm771.jpg" width="200" height="180" alt="foto de perfil">
                 <p>Imaginen que este es un párrafo autobiográfico con todos mis logros y asi. Para que no se vea tan vacio, voy a escribir un poco mas. Pepe Pecas pica papas con un palo, con un palo Pepe Pecas pica papas.</p>
             </div>
 
             <h2 id="texto-sobre-mi">Mis habilidades</h2>
             <div class="skill-grid-1">
                 <div class="skill-card">
-                    <img src="https://freesvg.org/img/ftstylesheet.png" width="75" height="75">
+                    <img src="https://freesvg.org/img/ftstylesheet.png" width="75" height="75" alt="icono css">
                     <h3>Experto en CSS</h3>
                     <p>Lo aprendi el dia de antier.</p>
                 </div>
                 <div class="skill-card">
-                    <img src="https://img.icons8.com/?size=100&id=GVJRhKJrA7lJ&format=png&color=000000"width="75" height="75">
+                    <img src="https://img.icons8.com/?size=100&id=GVJRhKJrA7lJ&format=png&color=000000"width="75" height="75" alt="icono ia">
                     <h3>Futuro expertp en IA</h3>
                     <p>Todavia me falta, esperenme un poco.</p>
                 </div>
@@ -49,17 +49,17 @@
 
             <div class="skill-grid-2">
                 <div class="skill-card">
-                    <img src="https://img.icons8.com/?size=100&id=FBycNmdwUQz1&format=png&color=000000" width="75" height="75">
+                    <img src="https://img.icons8.com/?size=100&id=FBycNmdwUQz1&format=png&color=000000" width="75" height="75" alt="icono java">
                     <h3>Conocimientos avanzados de Java</h3>
                     <p>A diferencia de las otras, esta de hecho si es verdad.</p>
                 </div>
                 <div class="skill-card">
-                    <img src="https://img.icons8.com/?size=100&id=hZvpN3zV45Yf&format=png&color=000000"width="75" height="75">
+                    <img src="https://img.icons8.com/?size=100&id=hZvpN3zV45Yf&format=png&color=000000"width="75" height="75" alt="icono python">
                     <h3>Conocimiento de Python</h3>
                     <p>Incluyendo algunos algoritmos de machine learning.</p>
                 </div>
                 <div class="skill-card">
-                    <img src="https://img.icons8.com/?size=100&id=121197&format=png&color=000000"width="75" height="75">
+                    <img src="https://img.icons8.com/?size=100&id=121197&format=png&color=000000"width="75" height="75" alt="gato">
                     <h3>Gatos</h3>
                     <p>No se me ocurrio que mas poner.</p>
                 </div>
@@ -72,7 +72,7 @@
             <h2 id="titulo-proyectos">Mis proyectos</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="https://heraldodemexico.com.mx/u/fotografias/m/2020/11/5/f1280x720-278913_410588_5050.jpg" width="150" height="100">
+                    <img src="https://heraldodemexico.com.mx/u/fotografias/m/2020/11/5/f1280x720-278913_410588_5050.jpg" width="150" height="100" alt="primer proyecto">
                     <div class="card-content">
                         <h3>Proyecto 1</h3>
                         <p>Este fue el primer proyecto</p>
@@ -91,7 +91,7 @@
                     <button class="verMas">Ver mas</button>
                 </div>
                 <div class="project-card">
-                    <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/01/16/16738813892252.jpg"width="150" height="100">
+                    <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/01/16/16738813892252.jpg"width="150" height="100" alt="segundo proyecto">
                     <h3>Proyecto 2</h3>
                     <p>Este fue el segundo proyecto</p>
                     <div class="badges">
@@ -107,7 +107,7 @@
                     <button class="verMas">Ver mas</button>
                 </div>
                 <div class="project-card">
-                    <img src="https://cdn.unotv.com/images/2023/08/razas-gatos-mas-obedientes-131424.jpg" width="150" height="100"></a>
+                    <img src="https://cdn.unotv.com/images/2023/08/razas-gatos-mas-obedientes-131424.jpg" width="150" height="100" alt="tercer proyecto"></a>
                     <h3>Proyecto 3</h3>
                     <p>Este fue el tercer proyecto</p>
                     <div class="badges">
@@ -131,25 +131,29 @@
         <div class="contenido-contacto">
             <form>
                 <div class="nombreYemail">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" title="Introduce un correo válido (ej. usuario@dominio.com)" placeholder="Email" required> 
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" placeholder="Nombre" aria-label="Nombre completo" required >
+                    <label for="correo">Correo:</label>
+                    <input type="email" aria-label="Correo electrónico" pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" title="Introduce un correo válido (ej. usuario@dominio.com)" placeholder="Email" required> 
+                    
                 </div>
                 
+            <label for="mensaje" id="label-mensaje">Mensaje:</label>
             <textarea required placeholder="Mensaje" minlength="20" title="Ingresa al menos 20 caracteres"></textarea>
-            <button type="submit" id="enviarMensaje">Enviar mensaje</button>
+            <button type="submit" id="enviarMensaje" aria-label="Mensaje">Enviar mensaje</button>
             </form>
             
             <div class="contacto-imagen">
                 <a href="https://www.youtube.com/watch?v=hvi3J3yBRXI" target="_blank">
-                    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" width="70" height="40">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" width="70" height="40" alt="icono github" loading="lazy" aria-label="Visitar mi perfil de GitHub">
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=hvi3J3yBRXI">
-                    <img src="https://logos-marcas.com/wp-content/uploads/2020/04/Linkedin-s%C3%ADmbolo.png" width="70" height="40">
+                    <img src="https://logos-marcas.com/wp-content/uploads/2020/04/Linkedin-s%C3%ADmbolo.png" width="70" height="40" alt="icono linkedin" loading="lazy" aria-label="Visitar mi perfil de LinkedIn">
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=hvi3J3yBRXI" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="40" height="40">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="40" height="40" alt="icono twitter" loading="lazy" aria-label="Visitar mi perfil de Twitter">
                 </a>
             </div>
         </div>
