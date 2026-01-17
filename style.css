@@ -16,7 +16,10 @@ header {
     padding: 1rem; /*espacio entre elementos del header*/
 }
 
-
+img {
+    max-width: 100%; /*Evita que la imagen se salga de la pantalla en celulares muy pequeños */
+    height: auto;
+}
 
 
 nav {
@@ -68,7 +71,6 @@ section {
     background: #f4f4f4; /*color de fondo del apartado hero de los proyectos*/
     text-align:  center; /*centrar el texto del apartado incio*/
 }
-
 
 .project-grid { 
     display: grid; /*poner las tarjetas de proyectos en una misma fila*/
@@ -126,6 +128,7 @@ footer {
 
 .project-grid {
     display: flex; /*Poner cajas en una fila continuas*/
+    flex-wrap: wrap; /*permite que las tarjetas bajen si no caben */
     gap: 20px;/*Poner espacio entre los cuadros */
     justify-content: center; /* Centrar las cajas*/
 }
@@ -134,11 +137,15 @@ footer {
 .project-card {
     border: 1px solid #ccc; /*Borde de las tarjetas de bloque*/
     padding: 25px; /*Espacio dentro de la tarjeta*/
-    width: 250px; /*Ancho de la tarjeta*/
+    width: 100%; /*Ancho de la tarjeta*/
+    max-width: 320px; /*Para que no crezca mucho*/
     text-align: left; /*Alinear el texto a la izquierda*/
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* ponerle sombra a la caja: X, Y, difuminado, color */
     border-radius: 4%; /*Hacer las tarjetas de bloque circulares*/
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
+
+    display: flex; /*Activa el flexbox para organizar los elementos*/
+    flex-direction:column; /*Los organiza uno debajo de del otro*/
 }
 
 .verMas {
@@ -163,6 +170,9 @@ footer {
     margin: 0 auto 10px; /*centrar la imagen*/
     margin-bottom: 5px; /*crear espacio en la parte de abajo para separar la imagen del texto*/
     border-radius: 20px; /*hacer la imagen circular*/
+    width: 100%; /*Hacer que la imagen ocupe todo el ancho de la tarjeta*/
+    height: 180px; /*Se ponen del mismo tamano para que se vean iguales*/
+    object-fit: cover; /*Se ocupa toda la imagen*/
 }
 
 .project-card p {
@@ -180,21 +190,38 @@ footer {
 }
 
 /*Contacto*/
+.contacto {
+    padding: 60px 10%; /*Pone espacio a los lados */
+    text-align: center; /*Centra el título y el contenido*/
+    background-color: #fdfdfd; /*Color de fondo de la seccion de contacto*/
+}
+
 .contenido-contacto {
-    display: flex; /*Poner el form y los iconos en una misma fila*/
-    align-items: center; /*Alinear los elementos al centro verticalmente*/
-    justify-content: flex-start; /*Centrar los elementos horizontalmente*/
-    gap: 20px; /*Crear espacio entre el form y los iconos*/
-    max-width: 800px; /*Ancho maximo del contenido de contacto*/
-    margin: 0 auto; /*Centrar el contenido de contacto*/
+    display: flex; /*Activa el flexbox para poder organizar las cajas de texto*/
+    flex-direction: column; /*Apila las cajas y los iconos del formulario de manera vertical*/
+    align-items: center; /*Centra los elementos*/
+    gap: 40px; /*Crea espacio entre los iconos y el formulario*/
+    margin-top: 30px; /*Crea espacio entre el titulo contacto y el formulario*/
 }
 
 .contenido-contacto form {
-    flex: 3; /*Espacio que ocupa el form en el flex*/
+    display: flex; /*Activa el flexbox para organizar los elementos del formulario*/
+    flex-direction: column; /*Organiza los elementos del formulario en columnas*/
+    width: 100%; /*Hace que el formulario ocupe todo el espacio disponible*/
+    max-width: 500px; /*Evita que el formulario se haga demasiado angosto */
+    
 }
 
 .contacto-imagen {
-    flex: 1; /*Espacio que ocupa los iconos*/
+    display: flex; /*Poner las imagenes juntas y en el centro*/
+    align-items: center;
+    justify-content: center;
+}
+
+input,textarea{
+    width: 100%; /*Ocupan todo el espacio que se les dé */
+    padding: 12px; /*hace las cajas mas gordas*/
+    box-sizing: border-box; /*Asegura que el padding no aumente el tamaño total */
 }
 
 /*Botones de lenguajes*/
@@ -232,8 +259,8 @@ footer {
 .foto-y-descripcion {
     margin-top: 15px; /*Espacio entre el titulo y la imagen*/
     margin-bottom: 50px; /*poner espacio entre el texto y la lista*/
-    padding-left: 300px; /*Para poner espacio entre el borde izquierdo y la imagen*/
-    padding-right: 300px; /*Para poner espacio entre el borde derechp y el texto*/
+    padding-left: 10%; /*Para poner espacio entre el borde izquierdo y la imagen*/
+    padding-right: 10%; /*Para poner espacio entre el borde derechp y el texto*/
     display: flex !important; /* El !important asegura que no haya otra regla ganándole */
     justify-content: center; /* ESTA LÍNEA centra el grupo completo horizontalmente */
     align-items: center;  /* Alinea el texto al inicio de la imagen */
@@ -244,6 +271,7 @@ footer {
 .foto-y-descripcion img {
     border: 5px solid white; /*ponerle un marco blanco al perfil*/
     border-radius: 70px; /*hacerlo un circulo*/
+    object-fit: cover; /*Asegurarse que la imagen no se deforme*/
 }
 
 .about-me{
@@ -257,6 +285,9 @@ footer {
     display: flex; /*Poner cajas en una fila continuas*/
     gap: 20px;/*Poner espacio entre los cuadros */
     justify-content: center; /* Centrar las cajas*/
+    flex-wrap: wrap; /*Hace que las cajas bajen a otra línea si no hay espacio */
+    padding-right: 15px; /*Ponerle espacio para que no se pegue al borde*/
+    padding-left: 15px;
 }
 
 .skill-grid-2 {
@@ -264,18 +295,31 @@ footer {
     display: flex; /*Poner cajas en una fila continuas*/
     gap: 20px;/*Poner espacio entre los cuadros */
     justify-content: center; /* Centrar las cajas*/
+    flex-wrap: wrap; /*Hace que las cajas bajen a otra línea si no hay espacio */
+    padding-right: 15px; /*Ponerle espacio para que no se pegue al borde*/
+    padding-left: 15px;
 }
 
 .skill-card {
     border: 1px solid #ccc; /*Borde de las tarjetas de bloque*/
     padding: 25px; /*Espacio dentro de la tarjeta*/
-    width: 250px; /*Ancho de la tarjeta*/
+    width: 90%; /*Ancho de la tarjeta*/
+    max-width: 280px;
     text-align: center; /*Alinear el texto a la izquierda*/
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.3); /* ponerle sombra a la caja: X, Y, difuminado, color */
-    border-radius: 4%; /*Hacer las tarjetas de bloque circulares*/
+    border-radius: 15%; /*Hacer las tarjetas de bloque circulares*/
+    flex-grow: 1; /*Las tarjetas crecen si sobra espacio*/
+    background-color: #222; /*Color de fondo de las tarjetas**/
 }
 
-/*EFECTO HOVER: La tarjeta se eleva y resalta */
+/*EFECTO HOVER: Al pasarle el mouse, la tarjeta se eleva y resalta */
+.skill-card:hover {
+    transform: translateY(-5px); /*Se mueve un poquito hacia arriba */
+    border-color: #ff6b6b; /*Cambia el borde de color */
+    transition: 0.3s; /*Hace como una animacion */
+}
+
+/*EFECTO HOVER: Al psasrle el mouse La tarjeta se eleva y resalta */
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.15);
@@ -284,6 +328,9 @@ footer {
 /* ESTILO DE LOS BADGES */
 .badges {
     margin: 1rem 0; /*Ajustarlos al centro*/
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .badge {
@@ -332,4 +379,61 @@ footer {
 
 .code:hover {
     background-color: #f4f4f4; /*color encima*/
+}
+
+/* Responsive seccion inicio */
+/* Esta regla se activa cuando la pantalla mide 768px o menos */
+@media (max-width: 768px) {
+    
+    .about-me h2 {
+        text-align: center; /*Centra el título "Sobre Mí"*/
+    }
+
+    .foto-y-descripcion {
+        flex-direction: column; /* Pone los elementos en columna (uno sobre otro) */
+        padding-left: 20px;     /* Reducimos el padding */
+        padding-right: 20px;
+        text-align: center;     /* Se centra el texto para que se vea equilibrado */
+    }
+
+    /* Se ajusta el tamaño de la imagen*/
+    .foto-y-descripcion img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* Responsive seccion habilidades */
+@media (max-width: 600px) {
+    .skill-card {
+        /* En celulares, aseguramos que no se vean demasiado anchas ni angostas */
+        max-width: 100%; 
+    }
+}
+
+
+/* Responsive seccion proyectos */
+@media (max-width: 768px) {
+    #titulo-proyectos{ /*Ajustar el texto*/
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/*Solo para pantallas mayores a 769px y menores a 1366 (osea, tabletas)*/
+@media (min-width: 769px) and (max-width: 1366px) {
+     #titulo-proyectos{ /*Ajustar el texto*/
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+
+/* Responsive de nombre e email para celular */
+@media (max-width: 600px) {
+    /* Aquí cambiamos la dirección de la fila Nombre/Email */
+    .nombreYemail {
+        flex-direction: column; /* Pasa de lado-a-lado a uno-sobre-otro */
+    }
 }
